@@ -1,0 +1,26 @@
+<div class="col-md-4 offset-md-4 mt-5 card card-body">
+    <h4 class="text-center">Enter task!</h4>
+    <form action="" #loginForm = 'ngForm' (ngSubmit) ='sendTask(loginForm)'>
+      <div class="form-group">
+        <input type="text" name="taskname"  placeholder="taskname" class="form-control" #taskname = 'ngModel'
+         ngModel >
+    </div>
+    <div>
+        <button type="submit" class="btn btn-success offset-8">submit</button>
+    </div>
+</form>
+<app-view-task [taskDetails]='taskData'></app-view-task>
+</div>
+<div class="container">
+        <table class="table table-bordered table-hover container mt-4">
+            <tr *ngFor='let tasks of task'>
+                <td>{{tasks.taskname}}</td>
+                <td>
+                    <button type="submit" class="btn btn-danger" (click)='deleteTask(tasks)'>delete</button>
+                </td>
+                <td>
+                        <button type="submit" class="btn btn-primary" (update)='updateTask(tasks)'>update</button>
+                    </td>
+            </tr>
+    </table>
+</div>
