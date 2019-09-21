@@ -1,0 +1,13 @@
+<table class="table table-bordered table-hover container mt-4">
+    <tbody>
+        <tr *ngFor='let td of taskDetails'>
+         <td>{{td.task}}</td>
+         <td>
+             <button type="submit" class="btn btn-outline-danger" (click)='deleteUser(user)'>delete</button>
+         </td>
+         <td>
+            <button type="submit" class="btn btn-outline-primary">update</button>
+        </td>
+        </tr>
+    </tbody>
+</table>
