@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript</title>
+    <script>
+    var myAge=24;
+    var myName='suma';
+    console.log("My Age ="+myAge);
+    console.log("my name is:"+myName);
+    var hasHobbies=true;
+    console.log(hasHobbies);
+    var myHobbies=null;
+    console.log(myHobbies);
+    var fruits;
+    console.log(fruits);
+    </script>
+</head>
+<body>
+    <script>
+    var person={
+        firstName:'prabhas',
+        lastName:'shetty',
+        age:40,
+        weight:78,
+        color:'white',
+        getFullName:function(){
+            return this.firstName+this.lastName;
+        }
+
+
+    }
+    console.log(person);
+   var name= person.name;
+   console.log('Name: '+name);
+   var age=person.age;
+   console.log("age "+age);
+   var weight=person.weight;
+   console.log("weight "+weight);
+   var color=person.color;
+   console.log("color "+color);
+   var fullName=person.getFullName();
+   console.log('Full name :'+fullName)
+  
+
+    </script>
+</body>
+</html>

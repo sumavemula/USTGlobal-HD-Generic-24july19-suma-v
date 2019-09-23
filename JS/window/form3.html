@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+     body{
+        margin-left: 500px;
+        margin-right: 600px;
+    }
+    </style>
+</head>
+<body>
+    <legend>
+        <fieldset>
+        <form name="loginform" action="welcome.html" method="post" class="form-signin" onSubmit="return result(this)" >
+                <label for="">User Name</label><br>
+                <div id="error"></div>
+                <input type="text" id="inputEmail" name="username" placeholder="UserID" onkeyup="username()">
+    
+                <div id="error1"></div>
+                <label for="">Password</label><br>
+                <input type="password" id="inputPassword" name="password" placeholder="Password" onkeyup="password()"><br>
+                <br>
+                <button type="submit" class="btn">Sign in</button>
+    </form>
+</fieldset>
+</legend>
+    <script src="form3.js"></script>
+</body>
+</html>
