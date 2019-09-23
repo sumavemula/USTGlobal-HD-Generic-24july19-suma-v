@@ -1,0 +1,30 @@
+<h1 [class] = "textClasses">{{name}}</h1>
+<!-- //string interpolation -->
+<h1 [class.bg-danger]="redColor" [class.bg-primary]="!redColor">{{5+5}}</h1>
+<img [src] ="imgURL" alt="">
+<p [style.background] = "paragraphStyle ? 'red' : 'blue'" [style.padding]='padding'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, nesciunt?</p>
+<table class="table table-border">
+    <thead>
+        <tr>
+            <th [attr.colspan]="columnSpan">Students</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Suma</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Vani</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Navya</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Kavitha</td>
+        </tr>
+    </tbody>
+</table>

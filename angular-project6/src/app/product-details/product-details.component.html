@@ -1,0 +1,50 @@
+<div class="col-md-12 mt-5" >
+        <div class=" col-md-4 float-left" *ngFor='let product of products'>
+             <h1>{{product.title}}</h1>
+             <img src="{{product.url}}" alt="">
+             <h4>{{product.description}}</h4>
+        </div>
+    </div>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" (click)=sendProduct(product)>
+      Edit
+      </button>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                    <form #form="ngForm" (ngSubmit)='sendData(form.value)'>
+        
+                            <legend class="text-center">Add Products!!</legend>
+                              <div class="form-group">
+                                      
+                                      <input type="text" class="form-control" name="item" #title='ngModel'
+                                      ngModel placeholder="Enter item">
+                              </div>
+                                    <div class="form-group">
+                                      
+                                          <input type="text" class="form-control" name="imgUrl" #imgUrl='ngModel'
+                                          ngModel placeholder=" Enter image URL">
+                                      </div>
+                                        <div class="form-group">
+                                             <textarea class="form-control" name="description" id="" cols="30" rows="5"
+                                             ngModel placeholder="description"></textarea>
+                                          </div>
+                                          <button type="submit" class="btn btn-primary float right ">submit</button>
+                          </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>

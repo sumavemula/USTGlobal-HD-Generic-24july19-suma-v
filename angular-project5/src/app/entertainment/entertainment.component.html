@@ -1,0 +1,10 @@
+<div class="col col-md-3 float-right">
+    <h3 class="text-center">Entertainment News</h3>
+        <div class="card card-body " *ngFor = "let enews of entertainmentNews">
+            <img src="{{enews.urlToImage}}" alt="" class="card-img-top">
+            <h3>{{enews.title}}</h3>
+            <p>{{enews.description}}</p>
+            <a href="{{enews.url}}" class="btn btn-primary">click here for more</a>
+        
+        </div>
+        </div>

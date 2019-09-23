@@ -1,0 +1,9 @@
+<div class="col col-md-3 float-right">
+        <h3 class="text-center">Science News</h3>
+    <div class="card card-body" *ngFor='let scinews of scienceNews'>
+        <img src="{{scinews.urlToImage}}" alt="" class="card-img-top">
+        <h3>{{scieNews.title}}</h3>
+        <p>{{scieNews.description}}</p>
+        <a href="{{scienews.url}}" class="btn btn-primary">click here for more</a>
+    </div>
+</div>

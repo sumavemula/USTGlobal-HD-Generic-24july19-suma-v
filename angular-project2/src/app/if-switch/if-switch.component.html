@@ -1,0 +1,13 @@
+<div *ngIf = 'condition; then trueBlock else falseBlock'></div>
+<ng-template  #trueBlock>true block is running</ng-template>
+<ng-template  #falseBlock>false block is running</ng-template><br>
+<input type="text" #inputElement>
+<button (click)='printInput(inputElement)'>print</button>
+
+<div [ngSwitch]='person'>
+    <p *ngSwitchCase="'suma'">suma code is running</p>
+    <p *ngSwitchCase="'vani'">vani code is running</p>
+    <p *ngSwitchCase="'navya'">navya code is running</p>
+    <p *ngSwitchCase="'kavitha'">kavitha code is running</p>
+    <p *ngSwitchDefault>default is running</p>
+</div>

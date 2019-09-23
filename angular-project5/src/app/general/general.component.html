@@ -1,0 +1,8 @@
+<div class="col col-md-3 float-right">
+                <h3 class="text-center">General News</h3>
+        <div class="card card-body " *ngFor = "let gennews of generalNews">
+                <img src="{{gennews.urlToImage}}" alt="" class="card-img-top">
+                <h3>{{gennews.title}}</h3>
+                <p>{{gennews.description}}</p>
+                <a href="{{gennews.url}}" class="btn btn-primary">click here for more</a>
+</div>

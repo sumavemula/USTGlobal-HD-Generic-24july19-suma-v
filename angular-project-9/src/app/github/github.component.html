@@ -1,0 +1,26 @@
+<table class="table table-bordered table-hover container mt-4">
+    <thead class="thead-dark">
+        <tr>
+            <th>id</th>
+            <th>node_id</th>
+            <th>avtar_url</th>
+            <th>Url</th>
+            <th>Type</th>
+            <th>delete</th>
+        </tr> 
+    </thead>
+    <tbody>
+        <tr *ngFor = 'let git of github'>
+            <td>{{git.id}}</td>
+            <td>{{git.node_id}}</td>
+            <td><img src="{{git.avatar_url}}" alt="" width="150px" height="150px"></td>
+            <td>
+            <a href="{{git.url}}" class="btn btn-primary mt-4"> click here for more images</a>
+            </td>
+            <td>
+                <button class="btn btn-outline-danger" (click)='deleteUser(git)'>Delete</button>
+            </td>
+            <td>{{git.type}}</td>
+        </tr>
+    </tbody>
+</table>

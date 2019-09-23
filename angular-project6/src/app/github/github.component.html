@@ -1,0 +1,9 @@
+<div class="container">
+<div class="card card-body col-md-4 float-left" *ngFor='let git of github'>
+    <img src="{{git.avatar_url}}" alt="" class="card-img-top" >
+    <h3>{{git.id}}</h3>
+    <p>{{git.node_id}}</p>
+    <a href="{{git.url}}" class="btn btn-primary"> click here for more images</a>
+
+</div>
+</div>

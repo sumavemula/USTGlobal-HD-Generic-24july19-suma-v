@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="col-md-3 mt-4 float-left">
+        <div class="card card-body" *ngFor='let animal of animals'>
+                <img src="{{animal.img}}" alt="" (click)='sendAnimal(animal)'>
+            <h1 class="text-center">{{animal.name}}</h1>
+            
+            
+        </div>
+    </div>
+    <app-animal-details [animalDetail]='animalsData'></app-animal-details>
+</div>

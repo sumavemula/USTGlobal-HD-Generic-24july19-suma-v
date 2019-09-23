@@ -1,0 +1,36 @@
+<div class="col-md-4 offset-md-4 mt-5 card card-body">
+        <h4 class="text-center">Register here!</h4>
+        <form action="" #loginForm = 'ngForm' (ngSubmit) ='printForm(loginForm)'>
+          <div class="form-group">
+            <label for="username">User name</label><br>
+            <input type="email" name="username"  placeholder="username" class="form-control" #username = 'ngModel'
+             ngModel required minlength="5" email>
+             <div *ngIf = 'username.invalid && username.touched'>
+               <div class="alert alert-danger" *ngIf = 'username.errors.email'>
+                 only email should be enter
+               </div>
+               <div class="alert alert-danger" *ngIf = 'username.errors.minlength'>
+                 minimum length should be 5
+               </div>
+             </div>
+          </div>
+          <div class="form-group" >
+            <label for="password">Password</label><br>
+            <input type="text" name="password" placeholder="password" class="form-control" #password='ngModel' ngModel required minlength="5">
+            <div *ngIf = 'password.invalid && password.touched'>
+              <div class="alert alert-danger" *ngIf = 'password.errors.minlength'>
+                minimum length should be 5
+              </div>
+              <div class="alert alert-danger" *ngIf="password.errors.password">
+                should enter password
+              </div>
+            </div>
+          </div>
+          <div class="btn-group col-md-8 offset-2">
+            <button type="reset" class="btn btn-primary">Reset</button> 
+            <button type="submit" class="btn btn-success" [disabled]='loginForm.invalid'>submit</button>
+          </div>
+        </form>
+      </div>
+      
+      

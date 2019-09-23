@@ -1,0 +1,8 @@
+.col-md-3{
+    overflow: scroll;
+    height: 550px;
+}
+img{
+    height:200px;
+    width:200px;
+}

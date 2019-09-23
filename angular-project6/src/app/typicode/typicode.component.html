@@ -1,0 +1,18 @@
+<table class="table table-bordered table-hover container mt-4">
+    <thead class="thead-light">
+        <tr>
+            <th>userId</th>
+            <th>id</th>
+            <th>title</th>
+            <th>body</th>
+        </tr> 
+    </thead>
+    <tbody>
+        <tr *ngFor = 'let tcode of typicode'>
+            <td>{{tcode.userId}}</td>
+            <td>{{tcode.id}}</td>
+            <td>{{tcode.title}}</td>
+            <td>{{tcode.body}}</td>
+        </tr>
+    </tbody>
+</table>

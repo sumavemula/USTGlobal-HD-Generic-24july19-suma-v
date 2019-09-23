@@ -1,0 +1,46 @@
+<div class="container card card-body col-md-4 mt-2 offset-4">
+        <form action="" #loginForm='ngForm' (ngSubmit)='printForm(loginForm)'>
+    <div class="form-group">
+        <div>y
+            <label for="">Username/email</label>
+            <input type="email" name="username" id="" class="form-control" placeholder="username"
+            #email='ngModel' ngModel email>
+        </div>
+        <div>
+            <label for="">password</label>
+            <input type="password" name="pswd" id="" class="form-control" placeholder="password"
+            #pswd='ngModel' ngModel required minlength="5">
+        </div>
+        <div class="offset-2">
+            <button class="btn btn-success" [disabled]='loginForm.invalid'>Submit</button>
+            <button class="btn btn-primary offset-1">Reset</button>
+        </div>
+    </div> 
+    </form>
+</div>
+<br>
+<br>
+<br>
+<div class="container">
+    <table class="table table-hover table-bordered table-dark">
+        <thead class="bg-dark">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>password</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody class="bg-dark">
+            <tr *ngFor='let user of users; index as i'>
+                <td>{{i+1}}</td>
+                <td>{{user.username | titlecase}}</td>
+                <td>{{user.pswd}}</td>
+                <td>
+                    <button class="btn btn-outline-danger" (click)='deleteUser(user)'> Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

@@ -1,0 +1,8 @@
+<div class="col-md-4 offset-md-4 card card-body mt-5"> 
+
+    <input type="text" [(ngModel)]='inputFromUser' class="form-control" (keyup)='buttonEvent(inputFromUser)'>
+    </div>
+    <h1 class="text-center" [style.background]="backgroundColor">
+        Two way databinding
+    </h1>
+    <button class="btn btn-primary" (click)='changeColor(inputFromUser)'>change color</button>
