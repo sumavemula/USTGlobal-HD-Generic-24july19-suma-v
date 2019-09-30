@@ -1,0 +1,35 @@
+<div class="col-md-4 offset-md-4 mt-5 card card-body">
+        <form #formdata='ngForm' (ngSubmit)='addTask(formdata)'>
+            <legend>Add Task</legend>
+        
+            <div class="form-group">
+                
+                <input type="text" class="form-control" id="" placeholder="Enter Task"
+                 name="taskname" #taskname="ngModel" ngModel >
+            </div>
+            <button type="submit" class="btn btn-primary" >Submit</button>
+        </form>
+</div>
+<div class="col-md-4 offset-md-4 mt-5 card card-body">
+                <table class="table table-hover table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Index</th>
+                      <th> Task</th>
+                      <th>Delete</th>        
+                    </tr>
+                  </thead>
+                    <tbody>
+                      <tr *ngFor = 'let tasks of task; index as i'>
+                        <td>{{i}}</td>
+                        <td>{{tasks.taskname}}</td>
+                        <td>
+                                <button class="btn btn-outline-danger" (click)='deleteTask(tasks)'>Delete</button>
+                            </td>
+                      </tr>
+                    </tbody>
+                </table>
+              </div>
+   
+           
+
